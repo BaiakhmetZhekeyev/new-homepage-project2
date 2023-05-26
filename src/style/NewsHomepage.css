@@ -2,9 +2,10 @@
     display: grid;
     justify-content: center;
     gap: 30px;
-    padding: 40px;
+    padding: 0 40px;
+    margin-top: 50px;
     grid-template-columns: repeat(3, minmax(200px, 24vw));
-    grid-template-rows: 140px 140px 180px 140px;
+    grid-template-rows: 160px 160px 220px 180px;
     grid-template-areas:
     "product1 product1 product4"
     "product1 product1 product4"
@@ -44,14 +45,17 @@
 .menu {
     display: flex;
     gap: 25px;
+    list-style-type: none;
 }
 
 .menu li a{
     color: #8F949C;
     font-size: 16px;
+    text-decoration: none;
 }
 
 .menu li a:hover{
+    cursor: pointer;
     color: #FF7943;
 }
 
@@ -75,7 +79,7 @@
 }
 
 .block2 {
-    padding-top: 12px;
+    display: flex;
 }
 
 .block2 h1 {
@@ -83,6 +87,7 @@
     font-size: 45px;
     font-weight: 900;
     word-spacing: 7px;
+    justify-content: inherit;
 }
 
 .block3 {
