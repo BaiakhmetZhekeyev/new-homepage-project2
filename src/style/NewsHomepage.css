@@ -1,0 +1,333 @@
+.blockWrapper {
+    display: grid;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+    grid-template-columns: repeat(3, minmax(200px, 24vw));
+    grid-template-rows: 140px 140px 180px 140px;
+    grid-template-areas:
+    "product1 product1 product4"
+    "product1 product1 product4"
+    "product2 product3 product4"
+    "product5 product6 product7"
+;
+}
+
+.block1 { grid-area: product1;}
+.block2 { grid-area: product2;}
+.block3 { grid-area: product3;}
+.block4 { grid-area: product4;}
+.block5 { grid-area: product5;}
+.block6 { grid-area: product6;}
+.block7 { grid-area: product7;}
+
+.header {
+    padding-top: 20px;
+    background-color: whitesmoke;
+}
+
+.headerContent {
+    display: flex;
+    justify-content: space-between;
+    background-color: whitesmoke;
+}
+
+.ant-layout-header {
+    padding-inline: 13%;
+}
+
+.logo {
+    align-self: center;
+    height: 40px;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+}
+
+.menu li a{
+    color: #8F949C;
+    font-size: 16px;
+}
+
+.menu li a:hover{
+    color: #FF7943;
+}
+
+.navButton {
+    display: none;
+    align-items: center;
+    font-size: 25px;
+    border: none;
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+.blockItem {
+}
+
+
+.block1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.block2 {
+    padding-top: 12px;
+}
+
+.block2 h1 {
+    color: #0A182D;
+    font-size: 45px;
+    font-weight: 900;
+    word-spacing: 7px;
+}
+
+.block3 {
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.block3 p {
+    line-height: 1.5;
+    color: #727478;
+}
+
+.readButton {
+    height: 45px;
+    width: 180px;
+    background-color: #F15249;
+    border: none;
+    color: #E9E8EA;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.readButton:hover {
+    background-color: #0A182D;
+    cursor: pointer;
+}
+
+.block4 {
+    background-color: #0A182D;
+    color: #E9E8EA;
+    padding: 20px;
+}
+
+.block4 h2 {
+    font-weight: bold;
+    font-size: 40px;
+    color: #EFA15C;
+    padding-bottom: 12px;
+}
+
+.block4 h3 {
+    color: white;
+    font-weight: bold;
+    padding-bottom: 7px;
+}
+
+.block4 h3:hover {
+    color: #EFA15C;
+
+}
+
+.block4 span {
+    font-weight: normal;
+    color: #C0C0C0;
+}
+
+hr.divider  {
+    border-top: 1px solid #bbb;
+    margin: 40px 0px;
+}
+
+.blockItem img {
+    height: 100%;
+}
+
+.pContainer {
+    display: flex;
+    gap: 15px;
+}
+
+.paragContainer h3 {
+    font-weight: bold;
+    font-size: 35px;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.paragContainer a {
+    color: #0A182D;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.paragContainer a:hover {
+    color: #F15249;
+}
+
+.paragContainer p {
+    line-height: 1.2;
+    color: #727478;
+}
+
+@media (max-width: 1180px) {
+    .block3 p {
+        line-height: 1.2;
+    }
+    .paragContainer h3 {
+        font-size: 32px;
+        margin-bottom: 2px;
+    }
+
+    .paragContainer a {
+        font-size: 15px;
+    }
+
+    .paragContainer p {
+        line-height: 1.1;
+        color: #727478;
+    }
+    .block2 h1 {
+        font-size: 42px;
+        font-weight: 900;
+        word-spacing: 7px;
+    }
+
+    hr.divider  {
+        margin: 30px 0px;
+    }
+
+}
+
+@media (max-width: 1000px){
+    .blockWrapper{
+        grid-template-columns: repeat(2, minmax(100px, 350px));
+        grid-auto-rows: 120px;
+        grid-template-areas:
+        "product1  product1"
+        "product1  product1"
+        "product2  product2"
+        "product3  product3"
+        "product4  product4"
+        "product4  product4"
+        "product4  product4"
+        "product5  product5"
+        "product6  product6"
+        "product7  product7"
+    ;
+    }
+
+    .buttonContainer {
+        display: flex;
+        align-items: center;
+    }
+    .navButton {
+        display: flex;
+        align-items: center;
+        font-size: 25px;
+        padding: 8px;
+    }
+
+    .navButton:hover {
+        background-color: #0A182D;
+        border-color: #0A182D;
+        border-radius: 2px;
+        color: white;
+    }
+
+    .ant-layout-header {
+        padding-inline: 13%;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menuContainer {
+        display: flex;
+    }
+
+    .navActive {
+        background-color: rgba(0,0,0,0.5);
+        color: white;
+        width: 100vw;
+        height: 100vh;
+        top:0;
+        left: 0;
+        position: fixed;
+        box-sizing: border-box;
+
+    }
+
+    .navOpen {
+        z-index: 1;
+        background-color: white;
+        position: fixed;
+        top: 0px;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        width: 50vw;
+        height: 100vh;
+        padding: 30px;
+    }
+
+    .navOpen ul{
+        display: flex;
+        flex-direction: column;
+        color: #282c34;
+    }
+
+    .navOpen .buttonContainer {
+        justify-content: flex-end;
+    }
+
+    .navOpen button {
+        display: flex;
+        font-size: 25px;
+        background-color: white;
+        /*align-items: flex-end;*/
+        /*justify-content: flex-end;*/
+        /*width: 100px;*/
+    }
+
+    .navOpen button:hover {
+        background-color: #0A182D;
+        border-color: #0A182D;
+        border-radius: 2px;
+        color: white;
+    }
+
+
+
+    .block3 p {
+        line-height: 1.5;
+    }
+
+    .paragContainer h3 {
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+
+    .paragContainer a {
+        font-size: 18px;
+    }
+
+    .paragContainer p {
+        line-height: 1.2;
+        color: #727478;
+    }
+    .block2 h1 {
+        font-size: 45px;
+        font-weight: 900;
+        word-spacing: 7px;
+    }
+
+}
+
