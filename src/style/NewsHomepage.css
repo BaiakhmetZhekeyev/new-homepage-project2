@@ -1,3 +1,7 @@
+.layout {
+    background: white;
+}
+
 .blockWrapper {
     display: grid;
     justify-content: center;
@@ -5,7 +9,7 @@
     padding: 0 40px;
     margin-top: 50px;
     grid-template-columns: repeat(3, minmax(200px, 24vw));
-    grid-template-rows: 160px 160px 220px 180px;
+    grid-template-rows: 150px 150px 200px 150px;
     grid-template-areas:
     "product1 product1 product4"
     "product1 product1 product4"
@@ -24,13 +28,14 @@
 
 .header {
     padding-top: 20px;
-    background-color: whitesmoke;
+    background-color: white;
 }
 
 .headerContent {
     display: flex;
     justify-content: space-between;
-    background-color: whitesmoke;
+    align-items: center;
+    background-color: white;
 }
 
 .ant-layout-header {
@@ -69,6 +74,7 @@
 }
 
 .blockItem {
+    text-align: left;
 }
 
 
@@ -80,6 +86,7 @@
 
 .block2 {
     display: flex;
+    align-items: center;
 }
 
 .block2 h1 {
@@ -87,14 +94,14 @@
     font-size: 45px;
     font-weight: 900;
     word-spacing: 7px;
-    justify-content: inherit;
+    margin: 0;
 }
 
 .block3 {
     font-size: 15px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .block3 p {
     line-height: 1.5;
@@ -126,7 +133,8 @@
     font-weight: bold;
     font-size: 40px;
     color: #EFA15C;
-    padding-bottom: 12px;
+    /*padding: 12px;*/
+    margin: 5px 0;
 }
 
 .block4 h3 {
@@ -137,7 +145,6 @@
 
 .block4 h3:hover {
     color: #EFA15C;
-
 }
 
 .block4 span {
@@ -160,6 +167,7 @@ hr.divider  {
 }
 
 .paragContainer h3 {
+    margin: 0;
     font-weight: bold;
     font-size: 35px;
     color: gray;
@@ -213,7 +221,7 @@ hr.divider  {
 @media (max-width: 1000px){
     .blockWrapper{
         grid-template-columns: repeat(2, minmax(100px, 350px));
-        grid-auto-rows: 120px;
+        grid-auto-rows: 140px;
         grid-template-areas:
         "product1  product1"
         "product1  product1"
@@ -297,9 +305,6 @@ hr.divider  {
         display: flex;
         font-size: 25px;
         background-color: white;
-        /*align-items: flex-end;*/
-        /*justify-content: flex-end;*/
-        /*width: 100px;*/
     }
 
     .navOpen button:hover {
@@ -308,8 +313,6 @@ hr.divider  {
         border-radius: 2px;
         color: white;
     }
-
-
 
     .block3 p {
         line-height: 1.5;
